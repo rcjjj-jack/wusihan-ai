@@ -1,0 +1,18 @@
+:root { font-family: "Microsoft YaHei", system-ui, sans-serif; color: #263238; background: #eef4f6; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
+.app { width: min(920px, 100%); height: min(780px, 100vh); display: flex; flex-direction: column; background: #fff; box-shadow: 0 18px 60px #78909c33; }
+.topbar { display: flex; align-items: center; gap: 12px; padding: 18px 24px; border-bottom: 1px solid #e8eef0; }
+.avatar { width: 45px; height: 45px; display:grid; place-items:center; border-radius: 50%; color:#fff; background: linear-gradient(135deg,#4f8f9b,#73b9a8); font-size: 22px; font-weight: 700; }
+h1 { margin: 0; font-size: 18px; } .topbar p { margin: 3px 0 0; color:#78909c; font-size: 13px; }
+.ghost { margin-left:auto; border:0; background:transparent; color:#78909c; cursor:pointer; }
+.chat { flex:1; overflow:auto; padding: 28px clamp(18px, 7vw, 80px); background:#fbfcfc; }
+.message { display:flex; margin: 14px 0; gap:10px; } .message.user { justify-content:flex-end; }
+.bubble { max-width: 78%; padding: 12px 15px; border-radius: 16px; white-space: pre-wrap; line-height:1.65; font-size:15px; }
+.bot .bubble { background:#eef6f4; border-top-left-radius: 4px; } .user .bubble { color:#fff; background:#589e9d; border-top-right-radius:4px; }
+.suggestions { display:flex; gap:8px; flex-wrap:wrap; padding:10px 24px; border-top:1px solid #edf1f2; }
+.suggestions button { border:1px solid #cde1df; border-radius:18px; padding:7px 12px; background:#fff; color:#3f7778; cursor:pointer; }
+.composer { display:flex; gap:10px; padding: 12px 24px 8px; } textarea { flex:1; resize:none; border:1px solid #d8e4e6; border-radius:14px; padding:12px; font:inherit; outline:none; } textarea:focus { border-color:#68aaa8; }
+.composer button { align-self:end; border:0; border-radius:13px; padding:12px 20px; color:#fff; background:#4e9998; cursor:pointer; font-weight:600; }
+.hint { margin: 0 24px 14px; color:#9aaeb2; font-size:12px; text-align:center; }
+@media (max-width:600px) { .app { height:100vh; } .bubble { max-width:88%; } .suggestions { overflow:auto; flex-wrap:nowrap; } }

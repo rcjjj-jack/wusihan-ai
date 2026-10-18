@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>武思寒智能</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="avatar">武</div>
+      <div><h1>武思寒智能</h1><p>你的智能聊天伙伴</p></div>
+      <button id="clearBtn" class="ghost">清空聊天</button>
+    </header>
+    <section id="chat" class="chat" aria-live="polite"></section>
+    <div class="suggestions">
+      <button>陪我聊聊天</button><button>帮我规划今天</button><button>陪我学习</button><button>帮我写点东西</button>
+    </div>
+    <form id="form" class="composer">
+      <textarea id="input" rows="1" placeholder="和武思寒说点什么……"></textarea>
+      <button type="submit">发送</button>
+    </form>
+    <p class="hint">武思寒会记住本次聊天内容。按 Enter 发送，Shift + Enter 换行。</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
